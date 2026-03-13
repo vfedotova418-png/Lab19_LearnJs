@@ -54,16 +54,75 @@
 //     }
 // }
 
-for (let i = 1; i <= 3; i++) {
-    for (let j = 1; j <= 3; j++) {
-        console.log(`i = ${i}, j = ${j}`);
+// for (let i = 1; i <= 3; i++) {
+//     for (let j = 1; j <= 3; j++) {
+//         console.log(`i = ${i}, j = ${j}`);
+//     }
+// }
+
+// for (let i = 1; i <= 4; i++) {
+//     let str = "";
+//     for (let j = 1; j <= i; j++) {
+//         str += "*"
+//     }
+//     console.log(str);
+// }
+
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(3, 5));
+
+function multiply(a, b) {
+    return a * b;
+}
+console.log(multiply(3, 5));
+
+function sayHello(name) {
+    console.log(`Hello, ${name}`);
+}
+sayHello("Тимофей");
+
+function prinInfo(name, age) {
+    console.log(`Имя: ${name}, возраст: ${age}`);
+}
+prinInfo("Helel", 18);
+
+function greet(name = "Гость") {
+    console.log("Привет, " + name);
+}
+greet();
+greet("Анастасия");
+
+function calculateDiscount(price, discount = 10) {
+    return price - (price * (discount / 100))
+}
+console.log(calculateDiscount(2000, 15));
+
+const add = function (a, b) {
+    return a + b;
+};
+console.log(add(2, 3));
+
+function makeCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
     }
 }
 
-for (let i = 1; i <= 4; i++) {
-    let str = "";
-    for (let j = 1; j <= i; j++) {
-        str += "*"
-    }
-    console.log(str);
+const counter = makeCounter();
+console.log(counter());
+console.log(counter());
+console.log(counter());
+
+const sumFunc = (a, b) => a + b;
+const double = x => x * 2;
+const sumFunc2 = (a, b) => a + b;
+const sayGreeting = () => console.log("Hello");
+const square = x => x * x;
+const calculate = (a, b) => {
+    let result = a + b;
+    return result * 2;
 }
